@@ -16,3 +16,12 @@ func FileScanner(path string) (*bufio.Scanner, error) {
 
 	return bufio.NewScanner(file), nil
 }
+
+// ReadIntoStringArray reads the content of file into an array
+func ReadIntoStringArray(scanner *bufio.Scanner) []string {
+	var strings []string
+	for scanner.Scan() {
+		strings = append(strings, scanner.Text())
+	}
+	return strings
+}
