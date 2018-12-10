@@ -15,7 +15,7 @@ func main(){
 	if scanner , err := tools.FileScanner(path); err != nil {
 		fmt.Println(err.Error())
 	} else {
-		answer := days.DayTwoPartTwo(scanner)
+		answer := days.DayThreePartOne(scanner, 1000)
 		fmt.Println("Solution: ", answer)
 	}
 
