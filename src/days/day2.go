@@ -8,7 +8,6 @@ package days
 import (
 	"bufio"
 	"tools"
-	"fmt"
 )
 
 func DayTwo(scanner *bufio.Scanner) int {
