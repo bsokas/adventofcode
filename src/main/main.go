@@ -1,21 +1,21 @@
 package main
 
 import (
-	"os"
-	"fmt"
-	"tools"
 	"days"
+	"fmt"
+	"os"
+	"tools"
 )
 
 const defaultPath = "../input/"
 
-func main(){
+func main() {
 	path := defaultPath + os.Args[1]
 	fmt.Println("Running programing for file: ", path)
-	if scanner , err := tools.FileScanner(path); err != nil {
+	if scanner, err := tools.FileScanner(path); err != nil {
 		fmt.Println(err.Error())
 	} else {
-		answer := days.DayThreePartOne(scanner, 1000)
+		answer := days.DayFive(true, scanner)
 		fmt.Println("Solution: ", answer)
 	}
 
